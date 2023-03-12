@@ -10,7 +10,7 @@ public class StatsServiceTest {
     @Test
     void shouldCalculatedSum() {
         StatsService service = new StatsService();
-        int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 180;
 
         int actual = service.calculatedSum(sales);
@@ -58,9 +58,9 @@ public class StatsServiceTest {
     void shouldAmountMonthUnderAvg() {
         StatsService service = new StatsService();
         int[] amountMonthUnderAvg = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected =5 ;
+        int expected = 5;
 
-        long actual = service.amountMonthUnderAvg (amountMonthUnderAvg);
+        long actual = service.amountMonthUnderAvg(amountMonthUnderAvg);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -69,9 +69,9 @@ public class StatsServiceTest {
     void shouldamountMonthOverAvg() {
         StatsService service = new StatsService();
         int[] amountMonthOverAvg = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected =5 ;
+        int expected = 5;
 
-        long actual = service.amountMonthOverAvg (amountMonthOverAvg);
+        long actual = service.amountMonthOverAvg(amountMonthOverAvg);
 
         Assertions.assertEquals(expected, actual);
 

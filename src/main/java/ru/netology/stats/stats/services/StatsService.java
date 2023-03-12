@@ -9,23 +9,25 @@ public class StatsService {
         }
         return sum;
     }
+
     public int calculateAvg(int[] sales) {
         return calculatedSum(sales) / sales.length;
     }
 
     public int sumMaxMonth(long[] sales) {
-    int maxMonth = 0;
-    int month = 0; // переменная для индекса рассматриваемого месяца в массиве
-    for (long sale : sales) {
-        // sales[maxMonth] - продажи в месяце minMonth
-        // sale - продажи в рассматриваемом месяце
-        if (sale >= sales[maxMonth]) {
-            maxMonth = month;
+        int maxMonth = 0;
+        int month = 0; // переменная для индекса рассматриваемого месяца в массиве
+        for (long sale : sales) {
+            // sales[maxMonth] - продажи в месяце minMonth
+            // sale - продажи в рассматриваемом месяце
+            if (sale >= sales[maxMonth]) {
+                maxMonth = month;
+            }
+            month = month + 1; // следующий рассматриваемый месяц имеет номер на 1 больше
         }
-        month = month + 1; // следующий рассматриваемый месяц имеет номер на 1 больше
+        return maxMonth + 1;
     }
-    return maxMonth + 1;
-}
+
     public int sumMinMonth(long[] sales) {
         int minMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
